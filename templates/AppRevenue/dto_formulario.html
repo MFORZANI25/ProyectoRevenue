@@ -1,0 +1,14 @@
+{% extends "AppRevenue/padre.html" %}
+
+{% block ContenidoQueCambia %}
+<form action= "{% url "FormularioDescuento" %}" method= "POST"> {% csrf_token %}
+    <p>Region:
+        <input type="text" name="region" />
+    </p>
+    <p>SKU:
+        <input type="number" name="sku" />
+    </p>
+    <input type="submit" value="Enviar"/>
+
+</form>
+{% endblock ContenidoQueCambia %}
